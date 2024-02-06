@@ -1,0 +1,5 @@
+{
+  "workbench.activityBar.iconClickBehavior": "focus",
+  "debug.toolBarLocation": "docked",
+  "workbench.layoutControl.type": "menu"
+}
