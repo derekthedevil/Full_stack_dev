@@ -60,3 +60,31 @@ print("pratham bhalerao".title())
 print("my name is pratham bhalerao ".capitalize() )
 print("Hello455".lower())
 print("5352546".lower())
+
+
+
+
+
+
+
+
+print("HELLO".isupper())
+print("HeLLo".isupper())
+
+print("hello".islower())
+print("Hello".islower())
+
+print("hello Python".istitle())
+print("Hello Python".istitle())
+
+
+print("hello".isalpha())
+print("hello5".isalpha())
+
+print("hello45".isalnum())
+print("Hello".isalnum())
+
+print("4665".isalnum())
+
+print("45".isdigit())
+print("R45".isdigit())
