@@ -5,6 +5,3 @@
 # else:
 #     print(abc,"is not a perfect square")
     
-abc = 15
-x = abc**0.5
-print(x)
