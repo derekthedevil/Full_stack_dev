@@ -22,3 +22,22 @@ print(l5)
 print(l3)
 print(10 in l1)
 print(100 not in l1)
+
+
+
+
+# data1[3].append(99)
+print(data1)
+
+
+
+data = [55,88,22,44,33,99,77,22]
+
+print (data.index(22))
+
+
+L_index = []
+for i in range(0,len(data)):
+    if data[i] == 22 :
+        L_index.append(i)
+print(L_index)
