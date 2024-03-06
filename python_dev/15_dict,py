@@ -1,0 +1,26 @@
+marks = {"python":95,"java":96,"django":97}
+
+print(marks["python"])
+
+l1 = [("python",95),("java",96),("django",97)]
+d1 = dict(l1)
+print(d1)
+
+d1["sql"] = 90
+print(d1)
+
+del d1["python"]
+print(d1)
+
+fruits = {"a":"apple","b":"banana","c":"chiku"}
+print(fruits.get("a"))
+print(fruits.keys())
+print(fruits.values())
+print(fruits.items())
+
+fruits.pop("a")
+print(fruits)
+fruits.setdefault("d","dragonfruit")
+print(fruits)
+fruits.setdefault("c","chocolate")
+print(fruits)
