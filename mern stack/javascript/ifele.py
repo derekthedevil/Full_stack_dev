@@ -1,3 +1,3 @@
 if True:{
-    print(True)
+print("hi")
 }
