@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     "drinks",
     "rest_framework",
     'rest_framework.authtoken',
+    "rest_framework_api_key",
+    "djoser",
 ]
 
 MIDDLEWARE = [
@@ -125,3 +127,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+API_KEY_CUSTOM_HEADER = "HTTP_X_API_KEY"
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+} 

@@ -1,11 +1,16 @@
 from django.http import JsonResponse
 from .models import Drink
 from .serializers import DrinkSerializers
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view ,permission_classes
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework_api_key.models import APIKey
+from rest_framework_api_key.permissions import HasAPIKey
+from rest_framework.authentication import TokenAuthentication
+from django.views.decorators.csrf import csrf_exempt
 
 @api_view(["GET","POST"])
+# @permission_classes([HasAPIKey])
 def drink_list(request):
     if request.method == "GET" :
         drinks  = Drink.objects.all()
@@ -19,6 +24,7 @@ def drink_list(request):
 
 
 @api_view(['GET','PUT','DELETE'])
+@csrf_exempt
 def drink_detail(request,id):
     try:
         drink = Drink.objects.get(pk=id)
@@ -36,3 +42,6 @@ def drink_detail(request,id):
     elif request.method =="DELETE":
         drink.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+# my-remote-service 50sA0mfr.cUpLGkCwpUtN4DtFNbQygK564ID9YP8h
